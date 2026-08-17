@@ -56,6 +56,11 @@ def compare_model_results(
             "model bu sınıfı yakalama konusunda daha hassas hale geldi."
         )
 
+    elif precision_change > 0:
+        interpretations.append(
+            f"{positive_label} sınıfının precision değeri yükseldi."
+        )
+
     if f1_change > 0:
         interpretations.append(
             f"{positive_label} sınıfının F1-score değeri "
@@ -63,11 +68,25 @@ def compare_model_results(
             f"{balanced_results['f1_score']:.4f} seviyesine yükseldi."
         )
 
+    elif f1_change < 0:
+        interpretations.append(
+            f"{positive_label} sınıfının F1-score değeri "
+            f"{baseline_results['f1_score']:.4f} seviyesinden "
+            f"{balanced_results['f1_score']:.4f} seviyesine düştü."
+        )
+
     if recall_change > 0 and accuracy_change < 0:
         interpretations.append(
             "Sonuçlar bir performans dengesi (trade-off) olduğunu "
             "göstermektedir: azınlık sınıfını yakalama başarısı artarken "
             "genel doğruluk azalmıştır."
+        )
+
+    if not interpretations:
+        interpretations.append(
+            "Baseline ve Balanced Random Forest modelleri aynı performansı "
+            "göstermiştir. Sınıflar dengeli olduğundan class weighting "
+            "bu veri setinde model sonuçlarında değişiklik oluşturmamıştır."
         )
 
     return interpretations

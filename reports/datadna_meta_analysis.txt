@@ -1,0 +1,9 @@
+DATADNA AI - META ANALYSIS REPORT
+=======================================================
+
+- Meta analizde toplam 4 veri seti incelenmiştir.
+- Mevcut veri seti sayısı genellenebilir istatistiksel sonuçlar çıkarmak için sınırlıdır. Bulgular deneysel gözlemler olarak değerlendirilmelidir.
+- Tama yakın dengeli veri setlerinde ortalama recall kazancı 0.0000 olarak gözlenmiştir.
+- Sınıf dengesi daha düşük veri setlerinde ortalama recall kazancı 0.0703 olarak gözlenmiştir.
+- Class balance ratio ile recall gain arasındaki Pearson korelasyonu -0.8713 olarak hesaplanmıştır.
+- Mevcut deneylerde sınıf dengesi arttıkça balanced Random Forest kaynaklı recall kazancının azalma eğiliminde olduğu gözlenmiştir.
