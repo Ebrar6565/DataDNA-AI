@@ -1,0 +1,57 @@
+=======================================================
+DATADNA AI - ANALYSIS REPORT
+=======================================================
+
+1. DATASET STRUCTURE
+-------------------------------------------------------
+Row Count: 1000
+Column Count: 21
+Numeric Columns: 7
+Categorical Columns: 13
+Numeric Ratio: 35.00%
+Categorical Ratio: 65.00%
+
+2. DATA QUALITY
+-------------------------------------------------------
+Missing Value Ratio: 0.00%
+Duplicate Row Ratio: 0.00%
+IQR Outlier Candidate Ratio: 4.66%
+
+3. TARGET ANALYSIS
+-------------------------------------------------------
+Target Column: class
+Number of Classes: 2
+good: 700
+bad: 300
+Class Balance Ratio: 0.4286
+
+4. DATA RECOMMENDATIONS
+-------------------------------------------------------
+- Eksik değer problemi tespit edilmedi.
+- Tekrarlı kayıt problemi tespit edilmedi.
+- Sayısal değişkenlerde IQR yöntemine göre aykırı değer adayları bulunmaktadır. Bu değerler silinmeden önce değişkenlerin anlamı incelenmelidir.
+- Hedef değişkende sınıf dengesizliği tespit edildi. Model değerlendirilirken yalnızca accuracy kullanılmamalı; precision, recall ve F1-score değerleri de incelenmelidir. Class weighting gibi yöntemler denenebilir.
+
+5. RANDOM FOREST RESULTS
+-------------------------------------------------------
+Baseline Random Forest
+  Accuracy: 0.7700
+  Precision: 0.6750
+  Recall: 0.4500
+  F1-score: 0.5400
+
+Balanced Random Forest
+  Accuracy: 0.7300
+  Precision: 0.5484
+  Recall: 0.5667
+  F1-score: 0.5574
+
+6. MODEL INTERPRETATION
+-------------------------------------------------------
+- Balanced model, bad sınıfının recall değerini 0.4500 seviyesinden 0.5667 seviyesine yükseltti.
+- Balanced model kullanıldığında accuracy 0.7700 seviyesinden 0.7300 seviyesine düştü.
+- bad sınıfının precision değeri düşerken, model bu sınıfı yakalama konusunda daha hassas hale geldi.
+- bad sınıfının F1-score değeri 0.5400 seviyesinden 0.5574 seviyesine yükseldi.
+- Sonuçlar bir performans dengesi (trade-off) olduğunu göstermektedir: azınlık sınıfını yakalama başarısı artarken genel doğruluk azalmıştır.
+
+=======================================================

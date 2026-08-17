@@ -1,0 +1,80 @@
+{
+    "dataset_profile": {
+        "row_count": 1000,
+        "column_count": 21,
+        "feature_count": 20,
+        "numeric_count": 7,
+        "categorical_count": 13,
+        "numeric_ratio": 0.35,
+        "categorical_ratio": 0.65,
+        "missing_count": 0,
+        "missing_ratio": 0.0,
+        "duplicate_count": 0,
+        "duplicate_ratio": 0.0,
+        "outlier_count": 326,
+        "outlier_ratio": 0.0466,
+        "outlier_by_column": {
+            "duration": 70,
+            "credit_amount": 72,
+            "installment_commitment": 0,
+            "residence_since": 0,
+            "age": 23,
+            "existing_credits": 6,
+            "num_dependents": 155
+        },
+        "target_column": "class",
+        "class_count": 2,
+        "class_distribution": {
+            "good": 700,
+            "bad": 300
+        },
+        "class_balance_ratio": 0.4286
+    },
+    "data_recommendations": [
+        "Eksik değer problemi tespit edilmedi.",
+        "Tekrarlı kayıt problemi tespit edilmedi.",
+        "Sayısal değişkenlerde IQR yöntemine göre aykırı değer adayları bulunmaktadır. Bu değerler silinmeden önce değişkenlerin anlamı incelenmelidir.",
+        "Hedef değişkende sınıf dengesizliği tespit edildi. Model değerlendirilirken yalnızca accuracy kullanılmamalı; precision, recall ve F1-score değerleri de incelenmelidir. Class weighting gibi yöntemler denenebilir."
+    ],
+    "model_results": {
+        "baseline_random_forest": {
+            "accuracy": 0.77,
+            "precision": 0.675,
+            "recall": 0.45,
+            "f1_score": 0.54,
+            "confusion_matrix": [
+                [
+                    27,
+                    33
+                ],
+                [
+                    13,
+                    127
+                ]
+            ]
+        },
+        "balanced_random_forest": {
+            "accuracy": 0.73,
+            "precision": 0.5484,
+            "recall": 0.5667,
+            "f1_score": 0.5574,
+            "confusion_matrix": [
+                [
+                    34,
+                    26
+                ],
+                [
+                    28,
+                    112
+                ]
+            ]
+        }
+    },
+    "model_interpretations": [
+        "Balanced model, bad sınıfının recall değerini 0.4500 seviyesinden 0.5667 seviyesine yükseltti.",
+        "Balanced model kullanıldığında accuracy 0.7700 seviyesinden 0.7300 seviyesine düştü.",
+        "bad sınıfının precision değeri düşerken, model bu sınıfı yakalama konusunda daha hassas hale geldi.",
+        "bad sınıfının F1-score değeri 0.5400 seviyesinden 0.5574 seviyesine yükseldi.",
+        "Sonuçlar bir performans dengesi (trade-off) olduğunu göstermektedir: azınlık sınıfını yakalama başarısı artarken genel doğruluk azalmıştır."
+    ]
+}
