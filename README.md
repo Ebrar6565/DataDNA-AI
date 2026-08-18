@@ -1,14 +1,14 @@
-# DataDNA AI
+ï»¿# DataDNA AI
 
-DataDNA AI, tablosal veri setlerinin yapısal ve veri kalitesi özelliklerini otomatik olarak analiz ederek veri setine ait bir profil oluşturmayı amaçlayan bir veri bilimi projesidir.
+DataDNA AI, tablosal veri setlerinin yapÄ±sal ve veri kalitesi Ã¶zelliklerini otomatik olarak analiz ederek veri setine ait bir profil oluÅŸturmayÄ± amaÃ§layan bir veri bilimi projesidir.
 
-## İlk geliştirilen özellikler
+## Ä°lk geliÅŸtirilen Ã¶zellikler
 
 - Veri seti boyut analizi
-- Sayısal ve kategorik değişken analizi
+- SayÄ±sal ve kategorik deÄŸiÅŸken analizi
 - Eksik veri tespiti
-- Tekrarlı kayıt tespiti
-- IQR tabanlı aykırı değer analizi
+- TekrarlÄ± kayÄ±t tespiti
+- IQR tabanlÄ± aykÄ±rÄ± deÄŸer analizi
 
 ## Teknolojiler
 
@@ -17,3 +17,4 @@ DataDNA AI, tablosal veri setlerinin yapısal ve veri kalitesi özelliklerini otom
 - NumPy
 - Scikit-learn
 - JupyterLab
+
